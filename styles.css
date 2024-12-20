@@ -38,4 +38,40 @@ table {
   tfoot td {
     font-weight: bold;
   }
-  
+
+
+img {border-radius: 50%;}
+
+.left {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+
+.container {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr; /* Two columns: one for image and one for text */
+    column-gap: 0px; /* Space between image and text */
+}
+
+.image {
+    grid-column: 1; /* Keep the image in the first column */
+    justify-self: start; /* Align to the left within the grid */
+    margin-left: 0; /* Ensure no extra space on the left */
+}
+
+img {
+    max-width: 50%; /* Maintain size adjustments */
+    max-height: 50%;
+    margin-left: -350px; /* Move the image even closer to the edge */
+}
+
+
+.text {
+    grid-column: 2; /* Place the text in the second column */
+    font-size: 70px;
+    margin-left: -750px; /* Move the image even closer to the edge */
+}
